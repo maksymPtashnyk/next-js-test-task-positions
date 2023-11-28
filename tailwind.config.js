@@ -18,6 +18,9 @@ module.exports = {
       height: {
         '836': '836px',
       },
+      boxShadow: {
+        '3xl': '0px 4px 8px 0px rgba(103, 100, 241, 0.16) inset;',
+      },
     },
   },
   plugins: [],

@@ -1,11 +1,7 @@
 "use client"
 import React, { useState } from 'react';
-import Link from 'next/link';
-import Tab1 from '../pages/tab1';
+import classNames from 'classnames';
 import Tab2 from '../pages/tab2';
-import Tab3 from '../pages/tab3';
-import Tab4 from '../pages/tab4';
-
 const pages = [
   {
     number: 1,
@@ -33,13 +29,16 @@ const Tabs = () => {
   };
 
   return (
-    <div className=" m-6 border-2 rounded-lg">
+    <div className="flex m-6 w-100 h-100 flex-col">
       <div className="flex">
         {pages.map(page => (
         <button 
-          className={activeTab === page.number 
-            ? " flex-initial p-4 text-violet-500 bg-gray-800 rounded-t-lg border-gray-400 border-2 border-b-0" 
-            : "text-gray-300 border-gray-400 border-2 rounded-lg"} 
+          className={classNames(
+            "flex-1 w-[15.875rem] h-12 rounded-tl-lg rounded-tr-lg border-2 border-neutral-100/[.08]",
+            activeTab === page.number 
+            ? "text-indigo-500 border-b-transparent shadow-3xl"
+            : "text-gray-300", 
+          )} 
           onClick={() => handleTabClick(page.number)}
           key={page.number}
         >
@@ -47,11 +46,8 @@ const Tabs = () => {
         </button>
         ))}
       </div>
-      <div className="tab-content">
-        {activeTab === 1 && <Tab1 />}
+      <div className="flex-shrink-0 w-100 h-[747px] border-t-transparent rounded-bl-lg rounded-br-lg border-2 border-[#ffffff]/[.08]">
         {activeTab === 2 && <Tab2 />}
-        {activeTab === 3 && <Tab3 />}
-        {activeTab === 4 && <Tab4 />}
       </div>
     </div>
   );
