@@ -8,6 +8,20 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(245, 245, 245, 0.08);
+  border-radius: 10px;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
 }

@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import Tab2 from '../pages/tab2';
+import Positions from '../pages/Positions';
 const pages = [
   {
     number: 1,
@@ -47,7 +47,7 @@ const Tabs = () => {
         ))}
       </div>
       <div className="flex-shrink-0 w-100 h-[747px] border-t-transparent rounded-bl-lg rounded-br-lg border-2 border-[#ffffff]/[.08]">
-        {activeTab === 2 && <Tab2 />}
+        {activeTab === 2 && <Positions />}
       </div>
     </div>
   );
